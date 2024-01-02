@@ -7,6 +7,7 @@
 body{
     background: #19191B;
     font-family: sans-serif;
+    overflow-x: hidden;
 }
 
 a {
@@ -19,24 +20,24 @@ a {
 }
 
 .btn__primary {
+    padding: 15px 60px 15px 27px; 
     color: #FFF;
+    border-radius: 4px;
+    background-color: #5454D4;
+    border: 1px solid #5454D4;
     font-size: 20px;
     font-weight: 500;
-    border-radius: 4px;
-    background: #5454D4;
-    border: 1px solid #5454D4;
-    padding: 15px 60px 15px 27px; 
     transition: all 0.3s ease;   
 }
 
-/* .btn__primary:hover {
-    
-} */
+.btn__primary:hover {
+    background: transparent;
+}
 
-.btn__primary-arrow {
-    background-image: url(../images/arrow-right-up.svg);
-    background-repeat: no-repeat;
-    background-position: center right 30px;
+.arrow__btn {
+    background-image: url(../images/arrow-right-up.svg) !important;
+    background-repeat: no-repeat !important;
+    background-position: center right 30px !important;
 }
 
 .nav__list-item .active {
@@ -137,7 +138,7 @@ header {
 .hero {
     padding-top: 150px;
     position: relative;
-    overflow: hidden;
+    
 }
 .hero__wrapper {
     display: flex;
@@ -208,13 +209,73 @@ header {
         line-height: 150%; 
     }
 
-    .btn__primary {
-        font-size: 16px;
-    }
-
     .bg__hero {
         width: 100%;
     }
 }
 
 /* End of Hero section */
+
+
+/* Video section */
+.video__content {
+    padding-top: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.video__content h2 {
+    max-width: 560px;
+    color: #FFF;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+.video__content p {
+    max-width: 588px;
+    color: rgba(255, 255, 255, 0.70);
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 39px; 
+    letter-spacing: -0.657px;    
+}
+
+iframe {
+    padding-top: 50px;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .video__content {
+        flex-direction: column;
+    }
+
+    .video__content h2 {
+        font-size: 36px;
+        line-height: 150%; 
+    }
+
+    .video__content p {
+        padding: 30px 0 50px;
+        font-size: 16px;    
+    }
+}
+
+/* End of Video section */
+
+
+
+/* Service section */
+
+.service__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service__list-item p {
+    max-width: 300px;
+}
+/* End of Service section */
+
