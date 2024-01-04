@@ -7,6 +7,9 @@
 body{
     background: #19191B;
     font-family: sans-serif;
+}
+
+main {
     overflow-x: hidden;
 }
 
@@ -71,6 +74,7 @@ header {
 }
 
 .contact-us {
+    z-index: 9999;
     color: #FFF;
     font-size: 16px;
     font-weight: 400;
@@ -79,6 +83,12 @@ header {
     border: 1px solid #FFF;
     backdrop-filter: blur(1px);
     padding: 12px 40px;
+    transition: all 0.3s ease;
+}
+
+.contact-us:hover {
+    background-color: #5454D4;
+    border: 1px solid #5454D4;
 }
 
 #menuOpener, .menuOpener {
@@ -267,15 +277,125 @@ iframe {
 
 
 /* Service section */
+.service {
+    position: relative;
+}
+
+.service::before {
+    content: "";
+    position: absolute;
+    top: -120px;
+    left: -150px;
+    width: 467px;
+    height: 508.495px;
+    transform: rotate(-54.374deg);
+    border-radius: 233.5px;
+    border: 1px solid white;
+    background: linear-gradient(180deg, rgba(84, 84, 212, 0.21) 0%, rgba(84, 84, 212, 0.09) 100%);
+    filter: blur(150px);
+}
+
+.service::after {
+    content: "";
+    position: absolute;
+    bottom: -600px;
+    right: -220px;
+    width: 599.578px;
+    height: 652.853px;
+    transform: rotate(54.374deg);
+    border-radius: 233.5px;
+    border: 1px solid white;
+    background: linear-gradient(180deg, rgba(84, 84, 212, 0.21) 0%, rgba(84, 84, 212, 0.09) 100%);
+    filter: blur(150px);
+}
+
+.service__wrapper {
+    margin-top: 50px;
+    padding: 100px 0 42px;
+    background: url(../images/uchbur.svg) top 50px left 40px,
+    url(../images/x.svg) right top 150px,
+    url(../images/x1.svg) bottom left;
+    background-repeat: no-repeat;
+}
+
+
+.service__title {
+    margin: 0 auto 98px;
+    max-width: 695px;
+    color: #FFF;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 70px; 
+}
 
 .service__list {
+    text-align: center;
     list-style: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    row-gap: 120px;
+    column-gap: 110px;
+}
+
+.service__list-item img {
+    padding: 18px;
+    border-radius: 50%;
+}
+
+.blue {
+    background-color: rgba(84, 84, 212, 0.10);
+}
+
+.red {
+    background-color: rgba(240, 64, 55, 0.10);
+}
+
+.yellow {
+    background-color: rgba(254, 220, 90, 0.10);
+}
+
+.service__list-item h2 {
+    margin: 20px  0;
+    color: #FFF;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.75px;    
 }
 
 .service__list-item p {
     max-width: 300px;
+    color: rgba(255, 255, 255, 0.70);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px; 
+    letter-spacing: -0.5px;    
+}
+
+@media screen and (max-width: 767px) {
+    .service__wrapper {
+        background: url(../images/uchbur.svg) top left,
+    url(../images/x.svg) right top 150px,
+    url(../images/x1.svg) bottom left;
+    background-repeat: no-repeat;
+    }
+
+    .service__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .service__title {
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 150%;
+        text-align: left;
+        padding-left: 24px;
+    }
 }
 /* End of Service section */
 
